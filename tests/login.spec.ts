@@ -54,7 +54,7 @@ test('correct error messaging with no password entered', async ({ page }) => {
   await expectLoginRejected(page, errorMessages.passwordRequired);
 });
 
-test.only('error messaging dissapears when closed', async ({ page }) => {
+test('error messaging dissapears when closed', async ({ page }) => {
   await page.locator('[data-test="login-button"]').click();
 
   await expect(page.locator('[data-test="error"]')).toBeVisible();
